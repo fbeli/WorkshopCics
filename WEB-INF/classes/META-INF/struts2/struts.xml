@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!--
+		Include da configuração padrão da framework BSAD para o Struts2.
+	 -->
+	<include file="META-INF/bsad/struts2/struts-config.xml" />
+	
+	<!--
+		Para criar um projeto BSAD-Mobile, comente o include acima e utilize este:
+	
+	<include file="META-INF/bsad/struts2/struts-mobile.xml" />
+	
+	    Também será preciso alterar o atributo 'extends' abaixo para o valor 'bsad-mobile-default'
+	-->
+
+	<package name="default" namespace="/" extends="bsad-default">
+		<action name="inicio" class="inicioAction" method="inicio">
+			<result>/WEB-INF/pages/inicio.jsp</result>
+		</action>
+
+		<action name="consultarSaudacao" class="inicioAction" method="consultarSaudacao">
+			<result>/WEB-INF/pages/inicio.jsp</result>
+			<result name="input">/WEB-INF/pages/inicio.jsp</result>
+		</action>
+	</package>
+</struts>
